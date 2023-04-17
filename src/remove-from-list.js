@@ -47,34 +47,31 @@ function removeKFromList(l, k) {
     }
     return -1;
   }
-function remove (k) {
+  function remove(k) {
+    let current = head;
 
-  let current = head;
+    if (indexOf(k) === 0) {
+      head = current.next;
+    } else {
+      let prev = null;
+      let index = 0;
 
-  if (indexOf(k) === 0) {
-    head = current.next;
-  } else {
-    let prev = null;
-    let index = 0;
-
-    while (index < indexOf(k)) {
-      prev = current;
-      current = current.next;
-      index++;
+      while (index < indexOf(k)) {
+        prev = current;
+        current = current.next;
+        index++;
+      }
+      prev.next = current.next;
     }
-    prev.next = current.next;
+
+    length--;
   }
 
-  length--;
-
-
-}
-
-while(indexOf(k) !== -1){
-  console.debug(indexOf(k));
-  remove(k)
-}
-return head;
+  while (indexOf(k) !== -1) {
+    console.debug(indexOf(k));
+    remove(k);
+  }
+  return head;
 }
 module.exports = {
   removeKFromList,
