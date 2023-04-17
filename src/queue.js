@@ -36,22 +36,8 @@ class Queue {
       current.next = new ListNode(value)
     }
     this.length++;
-    // if (this.obj.next && this.obj.next.value) {
-    //   this.obj.next.next = {
-    //     value: value,
-    //     next: null,
-    //   };
-    // }else if (this.obj.value) {
-    //   this.obj.next = {
-    //     value: value,
-    //     next: null,
-    //   };
-    // } else {
-    //   this.obj = {
-    //     value: value,
-    //     next: null,
-    //   };
-    // }
+
+
   }
 
   dequeue() {
